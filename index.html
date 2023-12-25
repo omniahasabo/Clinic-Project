@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>CLINICS</title>
+        
+    <script src="main.js"></script>
+    </head>
+   <body>
+        <header>
+          <a href="#" class="logo">CLINICS</a>
+          <nav>
+            <ul class="sidebar">
+              <li onclick=hidesidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#about us">About Us</a></li>
+              <li><a href="#contact us">Contact Us</a></li>
+              
+            </ul>
+
+            <ul>
+              <li class="hideOnMobile"><a href="#home">Home</a></li>
+              <li class="hideOnMobile"><a href="#services">Services</a></li>
+              <li class="hideOnMobile"><a href="#about us">About Us</a></li>
+              <li class="hideOnMobile"><a href="#contact us">Contact Us</a></li>
+              <li class="menu-button" onclick=showsidebar() ><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+            </ul>
+          </nav>
+          
+          <script>
+          function showsidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style. display = 'flex'
+          }
+          function hidesidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style. display = 'none'
+          }
+          </script>
+        </header>
+
+        <section class="main" id="home">
+   <div>
+   <h1>HEALTH CARE CLINICS</h1>
+   <h2>Let Us Help You To Feel Beautiful!</h2>
+   <a href="#about us" class="main-btn"> Make An Appointment </a>
+        </div>
+        </section>
+      
+
+  <section class="cards" id="services">
+    <h2 class="title">Our Services</h2>
+      <div class="content">
+      <div class="card">
+      <div class="image">
+       <img src="./derma.jpg" width="300px" height="300px">
+      </div>
+      <div class="info">
+              <h3>Dermatology Care</h3>
+              <h3>Price: 80$</h3>
+      </div>
+      </div>
+            <div class="content">
+              <div class="card">
+              <div class="image">
+               <img src="./hair.jpg" width="300px" height="300px" >
+              </div>
+              <div class="info">
+                <h3>Hair Care</h3>
+                <h3>Price: 100$</h3>
+              </div>
+              </div>
+              <div class="content">
+                <div class="card">
+                <div class="image">
+                 <img src="./Laser.jpg "width="300px" height="300px ">
+                </div>
+                <div class="info">
+                  <h3>Laser Services</h3>
+                  <h3>Price: 160$</h3>
+                </div>
+                </div>
+            </div>
+          </section>
+        
+          <section class="cards" id="DOCTORS">
+            <h2 class="title">Meet Our Doctors</h2>
+            <div class="content">
+            <div class="card">
+            <div class="image">
+             <img src="./doctor1.jpg" width="300px" height="300px">
+            </div>
+            <div class="info">
+              <h3>DR Amal Ahmad </h3>
+            </div>
+            </div>
+            <div class="content">
+              <div class="card">
+              <div class="image">
+               <img src="./doctor2.jpg" width="300px" height="300px" >
+              </div>
+              <div class="info">
+                <h3>DR Ghada muhammed</h3>
+              </div>
+              </div>
+              <div class="content">
+                <div class="card">
+                <div class="image">
+                 <img src="./doc3.jpg" width="300px" height="300px" >
+                </div>
+                <div class="info">
+                  <h3>DR Muhammed Ahmed</h3>
+                </div>
+                </div>
+              </section>
+              
+          <section class="About Us" id="about us">
+            <h2 class="title">ABOUT US</h2>
+            <div>
+            </div><h3><p>We are here to help get tired of fine lines, dull skin and dark circles,and we want you to be completely happy with your experience. We are excited to help you on your way to healthy skin!</p></h3>
+            <img src="./Skin care.jpg">
+            </div>
+          </section>
+
+          <div id="booking-form">
+            <h2>Book an Appointment</h2>
+            <form id="appointment-form" action= "index.php"  method="post" >
+              <label for="name"> Name:</label>
+              <input type="text" id="name" name="name" required/>
+        
+              <label for="doctor"> Doctor:</label>
+              <select id="doctor" name="doctor" required>
+                <option value="dr-amal">Dr.Amal Ahmad </option>
+                <option value="dr-ghada">Dr.Ghada muhammed</option>
+                <option value="dr-muhammed">Dr.Muhammed Ahmed </option>
+              </select>
+
+              <label for="Service"> Service:</label>
+              <select id="service" name="service" required>
+                <option value="dermatology-care">Dermatology Care</option>
+                <option value="hair-care">Hair Care</option>
+                <option value="laser-services"> Laser Services</option>
+              </select>
+
+              <label for="date"> Date:</label>
+              <input type="date" id="date" name="date" required>
+        
+              <button type="Book Appointment" name="btntest1" id="btn2">Book Appointment </button> 
+            </form>
+          </div>
+          <div class="container" id="contact us">
+            <h2>Contact Us</h2>
+            <form action="#" action="index(2).php"  method="post">
+
+              
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+        
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">password:</label>
+                <input type="password" id="pass" name="password" required>
+
+                <button type="submit" onclick="myfunction()">Show</button>
+        
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <button type="send" name="btntest" id="btn1">Send</button>
+            </form>
+          </div>
+
+        <footer>
+          <p>&copy; 2023 Your Website. All rights reserved.</p>
+        </footer>
+  </body>
+  </html>
+            
+            
+            
+        
+        
+            
+        
+            
+            
+        
